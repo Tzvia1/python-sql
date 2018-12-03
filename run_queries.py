@@ -8,10 +8,9 @@ PATH = 'C:\sqlite/'
 class Connection:
     def __init__(self,db_str):
         self.db = sqlite3.connect(db_str)
-        #self.cursor = self.db.cursor()
+       
 
     def __del__(self):
-        #self.cursor.close()
         self.db.close()
 
 def query_to_csv(query,db):
